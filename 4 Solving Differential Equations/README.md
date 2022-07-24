@@ -7,7 +7,9 @@ $$
 Euler's method can be summed up in two steps. Solve for the differential equation for $a$. Apply the truncated taylor series expansion to $v$ and $h$ (where $h$ is the height of the rocket):
 
 $$
-v_{n+1} = v_n+a_n\Delta t \\
+v_{n+1} = v_n+a_n\Delta t 
+$$
+$$
 h_{n+1} = h_n+v_n\Delta t
 $$
 

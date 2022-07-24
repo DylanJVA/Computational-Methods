@@ -47,4 +47,4 @@ First the function converts the integer to a string, then finds the index of the
     }
 ```
 Again, we cannot sum terms forever, so the `terms_still_contributing()` function is used. With a precision of $\varepsilon = 0.0000001$, after $n = 59644817$ terms, the sum converged to $13.42073$. I used a low precision because I wanted to get as many terms as possible to see if it really converged any faster than the harmonic series. The partial sums are plotted below. 
-[[hw1-kemp.jpg|width=400px]]
+![Kempner Series Partial Sums](hw1-kemp.jpg)

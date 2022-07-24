@@ -7,8 +7,8 @@ $$
 Euler's method can be summed up in two steps. Solve for the differential equation for $a$. Apply the truncated taylor series expansion to $v$ and $h$ (where $h$ is the height of the rocket):
 
 $$
-v_{n+1} &= v_n+a_n\Delta t
-h_{n+1} &= h_n+v_n\Delta t
+v_{n+1} = v_n+a_n\Delta t \\
+h_{n+1} = h_n+v_n\Delta t
 $$
 
 In each iteration of the loop, the values of $a_n$, $v_n$ and $h_n$ get updated. I began by imposing initial conditions on the rocket. $h(t=0)$ is the radius of the Earth, $v(t=0)=3000$ m/s which is the starting upward velocity. Next, I needed the parameters of the rocket. I used ones approximated from the characteristics found [here](https://en.wikipedia.org/wiki/Space_Shuttle_Solid_Rocket_Booster).

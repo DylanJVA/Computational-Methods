@@ -2,7 +2,7 @@
 Suppose we want to know the likelihood of an event given its prior likelihood and other information. It is useful to use a method of randomly sampling using the prior likelihood and simulate a large number of trials where the other information is satisfied to find the posterior probability. This is known as Monte Carlo simulation. Today we are asked two questions that will be solved using this method:
 - I have two children. At least one is a boy. What is the probability that I have two boys?
 - I have two children. At least one is a boy born on tuesday. What is the probability that I have two boys?
-## 1. $P(BB|\geq 1\text{ \text boy}, \mathcal{I})$
+## 1. $P(BB|\geq 1\text{boy}, \mathcal{I})$
 For the first problem, we begin by setting up a known prior likelihood distribution for being born as a boy or girl, assumed to be exactly $\frac{1}{2}$:
 ```
 default_random_engine generator;

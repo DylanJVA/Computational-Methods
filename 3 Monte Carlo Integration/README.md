@@ -25,7 +25,7 @@ $$
 
 $b$ converged to a value of $2.718182539328$ with a precision (comparing the area to 1) of $1\times10^{-6}$. 
 ![](avn.jpg)
-*A plot of the computed areas in final iteration of the integration to the converged $b$ value.*
+*A plot of the computed areas in final iteration of the integration to the converged b value.*
 
 # Riemann Integration
 Numerical Riemann integration is also quite simple and given a function $f(x)$, step size $dx$, and bounds $a$ and $b$ can be done in the following simple way:

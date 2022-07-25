@@ -20,7 +20,7 @@ $$
 The next part is to obtain uniform random coordinates in the triangle. This proved more difficult than expected. For points to not be clustered, the distribution of initial $x$ (or $y$, whichever is randomized first) values cannot be uniform. The probability must be weighted by the coresponding range of possible values for the other coordinate. One way of doing this is to use the square root of a uniform random distribution from 0 to 1: `sqrt(rand(0,1))`. This function has the property that the probability is weighted such that the probability to get a point is proportional to the point, so points near 1 are more likely than points near 0. To adjust this to my problem, I subtract that function from 1 so that points near 0 are more likely to accomodate the larger range of $y$ values at $x$ near 0. Then I just scale and shift the triangle from being a uniform triangle with vertices $(0,1),(0,0),(1,0)$ to $(1,1),(1,1/b),(b,1/b)$. Finally, with a bounding shape and a uniform coordinate distribution in that shape, monte carlo integration is done with the triangle. The area is computed by the fraction of the points under the curve in the triangle, remembering to add back the rectangle cut from the bottom of the curve:
 
 $$
-A=\frac{\text{\# random points under the curve}}{\text{\# random points}}\cdot \frac{1}{2}(1-\frac{1}{b})(b-1)+\frac{1}{b}(b-1);
+A=\frac{\text{\\# random points under the curve}}{\text{\\# random points}}\cdot \frac{1}{2}(1-\frac{1}{b})(b-1)+\frac{1}{b}(b-1);
 $$
 
 $b$ converged to a value of $2.718182539328$ with a precision (comparing the area to 1) of $1\times10^{-6}$. 

@@ -1,8 +1,10 @@
 # Monte Carlo Integration
 One method of computing the area under a curve is to draw a bounding box around that curve, sample random points in that box, and find the area by multiplying fraction of points under the curve times the total area of the bounding box. For a curve that has a maximum height $h$ on the interval $[a,b]$, the computed area under the curve  over that interval will be
-$$
+
+```math
 A=\frac{\text{\# random points under the curve}}{\text{\#  random points}}(b-a)h
-$$
+```
+
 It may also be useful to obtain an approximation of the bounds of an integrated function, knowing the area and the function. This is the case for the homework this week. It is known that the integral $\int_1^e\frac{1}{x}dx = 1$. Due to this, we can use Monte Carlo integration to integrate this curve from 1 to different numbers until we found the bound ($e$) such that the area is 1. I used a while loop to obtain this, and in each iteration of this loop an entire Monte Carlo integration is done from 1 to $b$. I randomly selected $b$ initially from 1 to 10, but each time I get an area larger than 1 I set the upper bound of $b$ to that value, and if I get an area smaller than 1 I set the lower bound of $b$ to that value. This is similar to bisection search except I am randomly sampling in the interval instead of picking the midpoint. The random bounds of $b$ very quickly converge close to $e$. Another consideration I took is that there is wasted space using a box from $(1,0)$ to $(b,1)$. 
 ## Uniform Coordinates in the Bounding Shape
 I decided to draw a triangle to reduce wasted space. It cuts off a rectangle at the bottom of the curve of width $b$ and height $1/b$. I must add this to the computed area under the curve.
